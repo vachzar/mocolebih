@@ -37,7 +37,7 @@ var Tribun = function(){
   });
   
   $.each(links, function( index, value ) {
-    if(index != 0){
+    if(index !== 0){
       var data = $.ajax({url: value, data: {param1: value, param2: value}, async: false}).responseText; 
       $(data).find('.txt-article').each(function(){
         $('.txt-article').append($(this).html());
@@ -56,7 +56,7 @@ var Viva = function(){
   });
   
   $.each(links, function( index, value ) {
-    if(index != 0){
+    if(index !== 0){
       var data = $.ajax({url: value, data: {param1: value, param2: value}, async: false}).responseText; 
       $(data).find('#article-content > span').each(function(){
         $('#article-content > span').append($(this).html());
