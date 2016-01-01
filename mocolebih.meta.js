@@ -7,7 +7,7 @@
 // @icon           https://raw.githubusercontent.com/vachzar/mocolebih/master/img/logo.png
 // @updateURL      https://raw.githubusercontent.com/vachzar/mocolebih/master/mocolebih.meta.js
 // @downloadURL    https://raw.githubusercontent.com/vachzar/mocolebih/master/mocolebih.user.js
-// @version        1.1
+// @version        1.2
 // @license        DBAD
 // @grant          GM_addStyle
 // @author         vachzar
