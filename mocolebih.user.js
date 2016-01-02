@@ -7,7 +7,7 @@
 // @icon           https://raw.githubusercontent.com/vachzar/mocolebih/master/img/logo.png
 // @updateURL      https://raw.githubusercontent.com/vachzar/mocolebih/master/mocolebih.meta.js
 // @downloadURL    https://raw.githubusercontent.com/vachzar/mocolebih/master/mocolebih.user.js
-// @version        1.2
+// @version        1.2.1
 // @license        DBAD
 // @grant          GM_addStyle
 // @author         vachzar
@@ -36,18 +36,19 @@ var Tribun = function(){
   $(document).find('.paging a').each(function () {
     links.push($(this).attr('href'));
   });
-  
-  $.each(links, function( index, value ) {
-    if(index !== 0){
-      var data = $.ajax({url: value, data: {param1: value, param2: value}, async: false}).responseText; 
-      $(data).find('.txt-article').each(function(){
-        $('.txt-article').append($(this).html());
-      });
-    }
-  });  
-    $('.paging').prev('div').hide();
-    $('.paging').hide();  
-    $('.txt-article').append( "<p><b>"+links.length+" Pages Loaded by MocoLebih </b></p>" );
+  if(links.length){
+    $.each(links, function( index, value ) {
+      if(index !== 0){
+        var data = $.ajax({url: value, data: {param1: value, param2: value}, async: false}).responseText; 
+        $(data).find('.txt-article').each(function(){
+          $('.txt-article').append($(this).html());
+        });
+      }
+    });  
+      $('.paging').prev('div').hide();
+      $('.paging').hide();  
+      $('.txt-article').append( "<p><b>"+links.length+" Pages Loaded by MocoLebih </b></p>" );
+  }
 };
 
 var Viva = function(){
@@ -62,17 +63,18 @@ var Viva = function(){
     $(document).find('.pagelist a.page').each(function () {
       links.push($(this).attr('href'));
     });
-    
-    $.each(links, function( index, value ) {
-      if(index !== 0){
-        var data = $.ajax({url: value, data: {param1: value, param2: value}, async: false}).responseText; 
-        $(data).find('#article-content > span').each(function(){
-          $('#article-content > span').append($(this).html());
-        });
-      }
-    });  
+    if(links.length){
+      $.each(links, function( index, value ) {
+        if(index !== 0){
+          var data = $.ajax({url: value, data: {param1: value, param2: value}, async: false}).responseText; 
+          $(data).find('#article-content > span').each(function(){
+            $('#article-content > span').append($(this).html());
+          });
+        }
+      });  
       $('.pagelist').prev('div').hide();
       $('.pagelist').hide();  
       $('#article-content').append( "<p><b>"+links.length+" Pages Loaded by MocoLebih </b></p>" );
+    }
   }
 };
