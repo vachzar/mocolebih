@@ -1,11 +1,12 @@
 # mocolebih
-User script ini membantu anda untuk membaca lebih web-web berita yang suka memotong artikel menjadi beberapa halaman yang terkadang hanya satu paragraf.
+User script ini membantu anda untuk membaca lebih web-web berita yang suka memotong artikel menjadi beberapa halaman yang terkadang hanya satu paragraf dan itu bikin males. :stuck_out_tongue_winking_eye:
 
 
-# Situs yang Didukung
+## Situs yang Didukung
 * tribunnews
 * viva
 * jawapos
+* Jpnn
 
 ## Persiapan Instalasi
 
@@ -44,6 +45,9 @@ Setelah melakukan persiapan dengan benar, kamu bisa download script-nya di sini:
 
 
 ## Changelog
+
+### 1.4
+* add jpnn
 
 ### 1.3
 * add jawapos

@@ -7,7 +7,7 @@
 // @icon           https://raw.githubusercontent.com/vachzar/mocolebih/master/img/logo.png
 // @updateURL      https://raw.githubusercontent.com/vachzar/mocolebih/master/mocolebih.meta.js
 // @downloadURL    https://raw.githubusercontent.com/vachzar/mocolebih/master/mocolebih.user.js
-// @version        1.3.0
+// @version        1.4.0
 // @license        DBAD
 // @grant          GM_addStyle
 // @author         vachzar
@@ -16,4 +16,5 @@
 // @include        http://*.tribunnews.com/*
 // @include        http://*.viva.co.id/news/read/*
 // @include        http://*.jawapos.com/read/*
+// @include        http://*.jpnn.com/read/*
 // ==/UserScript==
