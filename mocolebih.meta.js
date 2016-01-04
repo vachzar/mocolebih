@@ -16,5 +16,4 @@
 // @include        http://*.tribunnews.com/*
 // @include        http://*.viva.co.id/news/read/*
 // @include        http://*.jawapos.com/read/*
-// allow pasting
 // ==/UserScript==
