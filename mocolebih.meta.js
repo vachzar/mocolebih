@@ -1,4 +1,4 @@
-/ ==UserScript==
+// ==UserScript==
 // @name           mocolebih
 // @namespace      vachzar/mocolebih
 // @description    membaca lebih web-web berita ampas
