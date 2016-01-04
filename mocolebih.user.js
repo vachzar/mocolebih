@@ -7,7 +7,7 @@
 // @icon           https://raw.githubusercontent.com/vachzar/mocolebih/master/img/logo.png
 // @updateURL      https://raw.githubusercontent.com/vachzar/mocolebih/master/mocolebih.meta.js
 // @downloadURL    https://raw.githubusercontent.com/vachzar/mocolebih/master/mocolebih.user.js
-// @version        1.2.1
+// @version        1.3.0
 // @license        DBAD
 // @grant          GM_addStyle
 // @author         vachzar
@@ -15,6 +15,7 @@
 // @run-at         document-start
 // @include        http://*.tribunnews.com/*
 // @include        http://*.viva.co.id/news/read/*
+// @include        http://*.jawapos.com/read/*
 // allow pasting
 // ==/UserScript==
 
@@ -76,5 +77,25 @@ var Viva = function(){
       $('.pagelist').hide();  
       $('#article-content').append( "<p><b>"+links.length+" Pages Loaded by MocoLebih </b></p>" );
     }
+  }
+};
+
+var Jawapos = function(){
+  var links = [];
+  $(document).find('.newsPagingWrap a').each(function () {
+    links.push($(this).attr('href'));
+  });
+  if(links.length){
+    $.each(links, function( index, value ) {
+      if(index !== 0){
+        var data = $.ajax({url: value, data: {param1: value, param2: value}, async: false}).responseText; 
+        $(data).find('.sec-info.newsContent').each(function(){
+          $('.sec-info.newsContent').append($(this).html());
+        });
+      }
+    });  
+    $('.newsPagingWrap').prev('div').hide();
+    $('.newsPagingWrap').hide();  
+    $('.sec-info.newsContent').append( "<p><b>"+links.length+" Pages Loaded by MocoLebih </b></p>" );
   }
 };

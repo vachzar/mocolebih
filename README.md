@@ -1,10 +1,11 @@
 # mocolebih
-User script ini membantu ada untuk membaca lebih web-web ampas yang suka memotong artikel menjadi beberapa halaman yang terkadang hanya satu paragraf.
+User script ini membantu anda untuk membaca lebih web-web berita yang suka memotong artikel menjadi beberapa halaman yang terkadang hanya satu paragraf.
 
 
-# Supported Websites
+# Situs yang Didukung
 * tribunnews
 * viva
+* jawapos
 
 ## Persiapan Instalasi
 
@@ -43,6 +44,9 @@ Setelah melakukan persiapan dengan benar, kamu bisa download script-nya di sini:
 
 
 ## Changelog
+
+### 1.3
+* add jawapos
 
 ### 1.2
 * add log.viva.co.id redirection to original poster's website
